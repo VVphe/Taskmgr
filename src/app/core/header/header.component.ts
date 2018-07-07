@@ -9,6 +9,10 @@ export class HeaderComponent implements OnInit {
 
   @Output()
   toggle = new EventEmitter()
+
+  @Output()
+  toggleDarkTheme = new EventEmitter()
+
   constructor() { }
 
   ngOnInit() {
@@ -16,6 +20,11 @@ export class HeaderComponent implements OnInit {
 
   openSidebar() {
     this.toggle.emit()
+  }
+
+  onChange(checked) {
+    console.log(checked.checked)
+    this.toggleDarkTheme.emit(checked.checked)
   }
 
 }
