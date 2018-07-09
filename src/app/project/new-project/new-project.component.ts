@@ -11,13 +11,12 @@ export class NewProjectComponent implements OnInit {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) private data, 
-    private dialogRef: MatDialogRef<NewProjectComponent>,
-    private oc: OverlayContainer
+    private dialogRef: MatDialogRef<NewProjectComponent>
   ) { }
 
   ngOnInit() {
-    const dark = this.data.dark ? "myapp-dark-theme" : null
-    this.oc.getContainerElement().classList.add(dark)
+    // const dark = this.data.dark ? "myapp-dark-theme" : null
+    // this.oc.getContainerElement().classList.add(dark)
   }
 
   onClick() {
