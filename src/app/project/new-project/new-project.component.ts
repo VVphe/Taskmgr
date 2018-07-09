@@ -17,7 +17,6 @@ export class NewProjectComponent implements OnInit {
 
   ngOnInit() {
     const dark = this.data.dark ? "myapp-dark-theme" : null
-    console.log(dark)
     this.oc.getContainerElement().classList.add(dark)
   }
 

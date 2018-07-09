@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewProjectComponent } from "../new-project/new-project.component";
+import { InviteComponent } from "../invite/invite.component";
 import { MatDialog } from "@angular/material";
 
 @Component({
@@ -18,7 +19,7 @@ export class ProjectListComponent implements OnInit {
     {
       name: "企业协作平台",
       desc: "这是一个企业内部项目",
-      coverImg: "assets/img/covers/1.jpg"
+      coverImg: "assets/img/covers/3.jpg"
     },
   ]
 
@@ -30,6 +31,10 @@ export class ProjectListComponent implements OnInit {
   openNewProjectDialog() {
     const dialogRef = this.dialog.open(NewProjectComponent, {data: {dark: true}})
     dialogRef.afterClosed().subscribe(result => console.log(result))
+  }
+
+  inviteMembers() {
+    this.dialog.open(InviteComponent)
   }
 
 }

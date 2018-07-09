@@ -9,7 +9,6 @@ export class AppComponent {
   darkTheme: boolean = false
 
   switchTheme(dark: boolean) {
-    console.log(dark)
     this.darkTheme = dark
   }
 }
