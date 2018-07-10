@@ -16,6 +16,7 @@ export class AppComponent {
   switchTheme(dark: boolean) {
     this.darkTheme = dark
     const d = dark ? "myapp-dark-theme" : null
+    console.log(this.oc.getContainerElement())
     this.oc.getContainerElement().classList.add(d)
   }
 }

@@ -15,22 +15,27 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 1,
           desc: 'task 1',
+          completed: true,
+          priority: 3,
           owner: {
             id: 1,
             name: 'Jj',
-            avatar: 'avatar:svg-11'
+            avatar: 'avatars:svg-11'
           },
           dueDate: new Date()
         },
         {
           id: 2,
           desc: 'task 2',
+          completed: false,
+          priority: 2,
           owner: {
             id: 1,
             name: 'Vv',
-            avatar: 'avatar:svg-12'
+            avatar: 'avatars:svg-12'
           },
-          dueDate: new Date()
+          dueDate: new Date(),
+          reminder: new Date()
         }
       ]
     },
@@ -41,20 +46,24 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 1,
           desc: 'task 3',
+          completed: false,
+          priority: 1,
           owner: {
             id: 1,
             name: 'Ww',
-            avatar: 'avatar:svg-9'
+            avatar: 'avatars:svg-9'
           },
           dueDate: new Date()
         },
         {
           id: 2,
           desc: 'task 4',
+          completed: false,
+          priority: 2,
           owner: {
             id: 1,
             name: 'Vv',
-            avatar: 'avatar:svg-12'
+            avatar: 'avatars:svg-12'
           },
           dueDate: new Date()
         }

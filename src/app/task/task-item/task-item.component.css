@@ -1,0 +1,58 @@
+.content {
+    /* width: 100%; */
+    flex: 1;
+    padding: 2px;
+}
+
+.status-checkbox {
+    order: -1;
+}
+
+.bottom-bar {
+    margin-top: 5px !important;
+    order: 1;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+}
+
+mat-icon.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    order: 3;
+    margin: 12px;
+}
+
+.due-date {
+    background-color: #FF4F3E;
+    color: #fff;
+    height: 20px;
+}
+
+.alarm {
+    flex: 0 0 64px;
+}
+
+.completed {
+    opacity: 0.64;
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
+
+.priority-normal {
+    border-left: 3px solid #a6a6a6
+}
+
+.priority-important {
+    border-left: 3px solid #FFAF38
+}
+
+.priority-emergency {
+    border-left: 3px solid red
+}
+
+mat-list-item {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
