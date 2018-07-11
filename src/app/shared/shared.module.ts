@@ -17,7 +17,9 @@ import {
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule,
   } from "@angular/material";
+import { FormsModule } from '../../../node_modules/@angular/forms';
 
 @NgModule({
   imports: [
@@ -38,6 +40,8 @@ import {
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule,
+    FormsModule
   ],
   exports: [
     CommonModule,
@@ -57,6 +61,8 @@ import {
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule,
+    FormsModule
   ],
   declarations: []
 })
