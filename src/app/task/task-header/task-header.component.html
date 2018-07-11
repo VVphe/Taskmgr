@@ -3,7 +3,7 @@
     <h3>{{header}}</h3>
   </div>
   <div class="fill">
-    <button mat-button><mat-icon>add_circle_outline</mat-icon><span>new task</span></button>
+    <button mat-button (click)="onNewTaskClick()"><mat-icon>add_circle_outline</mat-icon><span>new task</span></button>
   </div>
   <div>
     <button mat-icon-button [matMenuTriggerFor]="menu">

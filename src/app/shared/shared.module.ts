@@ -14,6 +14,9 @@ import {
     MatMenuModule,
     MatCheckboxModule,
     MatTooltipModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   } from "@angular/material";
 
 @NgModule({
@@ -32,6 +35,9 @@ import {
     MatMenuModule,
     MatCheckboxModule,
     MatTooltipModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   exports: [
     CommonModule,
@@ -48,6 +54,9 @@ import {
     MatMenuModule,
     MatCheckboxModule,
     MatTooltipModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   declarations: []
 })
