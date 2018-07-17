@@ -9,6 +9,8 @@ import { OverlayContainer } from "@angular/cdk/overlay";
 })
 export class NewProjectComponent implements OnInit {
 
+  title: string = ''
+
   constructor(
     @Inject(MAT_DIALOG_DATA) private data, 
     private dialogRef: MatDialogRef<NewProjectComponent>
@@ -17,6 +19,7 @@ export class NewProjectComponent implements OnInit {
   ngOnInit() {
     // const dark = this.data.dark ? "myapp-dark-theme" : null
     // this.oc.getContainerElement().classList.add(dark)
+    this.title = this.data.title
   }
 
   onClick() {

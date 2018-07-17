@@ -20,6 +20,7 @@ import {
     MatSelectModule,
   } from "@angular/material";
 import { FormsModule } from '../../../node_modules/@angular/forms';
+import { ComfirmDialogComponent } from './comfirm-dialog/comfirm-dialog.component';
 
 @NgModule({
   imports: [
@@ -64,6 +65,7 @@ import { FormsModule } from '../../../node_modules/@angular/forms';
     MatSelectModule,
     FormsModule
   ],
-  declarations: []
+  declarations: [ComfirmDialogComponent],
+  entryComponents: [ComfirmDialogComponent]
 })
 export class SharedModule { }
