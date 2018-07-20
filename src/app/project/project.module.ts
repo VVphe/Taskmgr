@@ -11,7 +11,7 @@ import { ProjectRoutingModule } from "./project-routing.module";
     SharedModule,
     ProjectRoutingModule,
   ],
-  declarations: [ProjectListComponent, ProjectItemComponent,NewProjectComponent, InviteComponent],
+  declarations: [ProjectListComponent, ProjectItemComponent, NewProjectComponent, InviteComponent],
   entryComponents: [NewProjectComponent, InviteComponent]
 })
 export class ProjectModule { }

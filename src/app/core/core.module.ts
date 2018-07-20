@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AppRoutingModule } from "../app-routing.module";
 
 import { loadSvg } from "../utils/svg.util";
 
@@ -19,13 +20,15 @@ import { loadSvg } from "../utils/svg.util";
     BrowserAnimationsModule,
     // http
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AppRoutingModule,
   ]
   
 })
