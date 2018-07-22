@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { OverlayContainer } from '../../node_modules/@angular/cdk/overlay';
+import { Component, Inject } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
+import { config } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { OverlayContainer } from '../../node_modules/@angular/cdk/overlay';
 export class AppComponent {
   darkTheme: boolean = false
 
-  constructor(private oc: OverlayContainer) {
+  constructor(private oc: OverlayContainer, @Inject('BASE_CONFIG') config) {
 
   }
 

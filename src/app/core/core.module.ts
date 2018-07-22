@@ -29,6 +29,9 @@ import { loadSvg } from "../utils/svg.util";
     FooterComponent,
     SidebarComponent,
     AppRoutingModule,
+  ],
+  providers: [
+    {provide: 'BASE_CONFIG', useValue: 'http://localhost:3000'}
   ]
   
 })

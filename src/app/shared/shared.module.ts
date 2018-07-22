@@ -20,8 +20,10 @@ import {
     MatSelectModule,
     MatSidenavModule
   } from "@angular/material";
-import { FormsModule } from '../../../node_modules/@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComfirmDialogComponent } from './comfirm-dialog/comfirm-dialog.component';
+import { DirectiveModule } from '../directive/directive.module';
+import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 
 @NgModule({
   imports: [
@@ -44,7 +46,11 @@ import { ComfirmDialogComponent } from './comfirm-dialog/comfirm-dialog.componen
     MatNativeDateModule,
     MatSelectModule,
     FormsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    DirectiveModule,
+
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     CommonModule,
@@ -66,9 +72,14 @@ import { ComfirmDialogComponent } from './comfirm-dialog/comfirm-dialog.componen
     MatNativeDateModule,
     MatSelectModule,
     FormsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    DirectiveModule,
+
+    FormsModule,
+    ReactiveFormsModule,
+    ImageListSelectComponent
   ],
-  declarations: [ComfirmDialogComponent],
+  declarations: [ComfirmDialogComponent, ImageListSelectComponent],
   entryComponents: [ComfirmDialogComponent]
 })
 export class SharedModule { }

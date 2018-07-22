@@ -1,5 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { MatDialogRef, MatDialog } from '../../../../node_modules/@angular/material';
+import { MatDialogRef, MatDialog } from '@angular/material';
 import { NewTaskComponent } from "../new-task/new-task.component";
 import { CopyTaskComponent } from '../copy-task/copy-task.component';
 import { ComfirmDialogComponent } from '../../shared/comfirm-dialog/comfirm-dialog.component';
@@ -20,6 +20,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id: 1,
       name: 'todo',
+      order: 1,
       tasks: [
         {
           id: 1,
@@ -51,6 +52,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id: 2,
       name: 'doing',
+      order: 2,
       tasks: [
         {
           id: 1,
@@ -85,8 +87,8 @@ export class TaskHomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  addNewTastList() {
-    const dialogRef = this.dialog.open(NewTaskComponent)
+  launchNewTaskDialog() {
+    const dialogRef = this.dialog.open(NewTaskComponent, {data: {title: 'New task'}})
     // dialogRef.afterClosed().subscribe(result => console.log(result))
   }
 
@@ -110,6 +112,29 @@ export class TaskHomeComponent implements OnInit {
   launchEditListDialog() {
     const dialogRef = this.dialog.open(NewTaskListComponent, {data: {title: 'Edit List Name'}})
     dialogRef.afterClosed().subscribe(result => console.log(result))
+  }
+
+  handleMove(srcData, list) {
+    switch (srcData.tag) {
+      case 'task-item':
+        console.log('handling item')
+        break;
+
+      case 'task-list':
+        console.log('handling list')
+        const srcList = srcData.data;
+        const tempOrder = srcList.order;
+        srcList.order = list.order;
+        list.order = tempOrder;
+        break;
+    
+      default:
+        break;
+    }
+  }
+
+  handleQuickTask(desc) {
+    console.log(desc);
   }
 
 }
