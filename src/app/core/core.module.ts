@@ -31,7 +31,9 @@ import { loadSvg } from "../utils/svg.util";
     AppRoutingModule,
   ],
   providers: [
-    {provide: 'BASE_CONFIG', useValue: 'http://localhost:3000'}
+    {provide: 'BASE_CONFIG', useValue: {
+      url: 'http://localhost:3000'
+    }}
   ]
   
 })
